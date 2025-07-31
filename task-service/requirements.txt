@@ -1,0 +1,5 @@
+flask==2.3.3
+pytest==7.4.0
+prometheus-flask-exporter==0.22.4
+gunicorn==21.2.0         # opsional tapi direkomendasikan untuk run di Docker
+requests==2.31.0         # hanya jika ada antar microservice HTTP call
