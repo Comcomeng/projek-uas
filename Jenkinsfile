@@ -25,7 +25,7 @@ pipeline {
       steps {
         echo 'Running tests...'
         dir('task-service') {
-          bat 'pytest'
+          bat 'docker run --rm task-service pytest'
         }
       }
     }
