@@ -1,9 +1,12 @@
-FROM python:3.10-slim
+FROM python:3.11-slim
 
 WORKDIR /app
 
-COPY requirements.txt requirements.txt
+COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
+
+# Tambahkan ini jika belum ada pytest di requirements.txt
+# RUN pip install pytest
 
 COPY . .
 
