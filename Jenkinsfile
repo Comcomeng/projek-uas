@@ -36,7 +36,7 @@ pipeline {
         echo 'Running SonarQube analysis...'
         dir('task-service') {
           withSonarQubeEnv("${env.SONARQUBE_SERVER}") {
-            bat 'sonar-scanner -Dsonar.projectKey=task-service -Dsonar.projectName="Task Service UAS" -Dsonar.sources=.'
+            bat 'sonar-scanner' 
           }
         }
       }
